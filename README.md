@@ -23,13 +23,15 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
 
 ## 🚀 3. Actividades Desarrolladas Durante la Contingencia
 
+
 | Fecha | Actividad | Descripción breve | Evidencia | Commit ID |
 |:------|:-----------|:------------------|:-----------|:-----------|
 | 08/11/2025 | Creación del repositorio | Se cargó la práctica base y se configuró la API TMDB. | 743ce1f (HEAD -> main, origin/main) first commit | 743ce1f |
-| 09/11/2025 | Implementación del Splash Screen | Se añadió animación y audio libre con `flutter_native_splash`. | Commit `d4e5f6` + Captura 2 | d4e5f6 |
+| 09/11/2025 | Implementación del Splash Screen | Se creó la carpeta `audio` y dentro de `screens/splash` se agregó `splash_screen.dart` usando `just_audio` para animación y audio. | d977227 (HEAD -> main, origin/main) ExamenPractico | d977227 |
 | 10/11/2025 | Pantalla de carga progresiva | Se programó un indicador porcentual que incrementa al cargar los providers. | Commit `g7h8i9` + Captura 3 | g7h8i9 |
 | 11/11/2025 | Ajustes visuales en Swiper | Se agregaron título, fecha y clasificación con una píldora visual. | Commit `j0k1l2` + Captura 4 | j0k1l2 |
 | 11/11/2025 | Personalización del ícono de la app | Se reemplazó el ícono predeterminado de Flutter por uno personalizado usando `flutter_launcher_icons`. | d80c8e9 (HEAD -> main, origin/main) ExamenPractico | d80c8e9 |
+
 
 <p align="center">
   <img src="img/Repocitorio.png" alt="Evidencia - Creación del Repositorio" width="600"><br>
@@ -40,6 +42,21 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
   <img src="img/icono.jpg" alt="Evidencia - Personalización del ícono de la app" width="400"><br>
   <em><strong>Figura 2:</strong> Evidencia de la personalización del ícono en la app Flutter.</em>
 </p>
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+
+  <div style="text-align: center;">
+    <img src="img/img1.jpg" alt="Splash Screen - Logo de la App" width="400"><br>
+    <em><strong>Figura 3:</strong> Pantalla de carga inicial con el logo de la app.</em>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="img/img2.jpg" alt="Splash Screen - Animación y Audio" width="400"><br>
+    <em><strong>Figura 4:</strong> Animación con audio en el Splash Screen usando `just_audio`.</em>
+  </div>
+
+</div>
+
 
 ---
 
