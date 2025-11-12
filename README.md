@@ -1,16 +1,108 @@
-# cinemapedia_220031
+# Examen Práctico Unidad 2  
+**Asignatura:** Desarrollo Móvil Integral  
+**Proyecto:** Aplicación *Cinemapedia*  
 
-A new Flutter project.
+---
 
-## Getting Started
+##  1. Contexto
+<p align="justify">
+El proyecto <strong>Cinemapedia</strong> es una aplicación móvil desarrollada en <strong>Flutter</strong> con el objetivo de aprender y practicar el consumo de <strong>APIs</strong>. La aplicación permite mostrar información actualizada sobre películas en cartelera, próximas a estrenarse, populares, mejor calificadas y mexicanas, obtenidas desde una API externa.  
 
-This project is a starting point for a Flutter application.
+Actualmente, se está implementando esta misma funcionalidad para <strong>series</strong>, permitiendo consultar y visualizar contenido televisivo con una estructura similar a la de las películas.
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+##  2. Información General del Estudiante
+- **Nombre completo:** Jaime Vazquez Santiago 
+- **Matrícula:**  220031 
+- **Grupo:** B  
+- **Repositorio privado:** [https://github.com/Jaimevs/DMI_ExamenPractico_U2_220031](#)  
+- **Versión actual:** `v1.0-examen`  
+- **Último commit registrado:**  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 3. Actividades Desarrolladas Durante la Contingencia
+
+| Fecha | Actividad | Descripción breve | Evidencia |
+|:------|:-----------|:------------------|:-----------|
+| 08/11/2025 | Creación del repositorio | Se cargó la práctica base y se configuró la API TMDB. | 743ce1f (HEAD -> main, origin/main) first commit |
+| 09/11/2025 | Implementación del Splash Screen | Se añadió animación y audio libre con `flutter_native_splash`. | Commit `d4e5f6` + Captura 2 |
+| 10/11/2025 | Pantalla de carga progresiva | Se programó un indicador porcentual que incrementa al cargar los providers. | Commit `g7h8i9` + Captura 3 |
+| 11/11/2025 | Ajustes visuales en Swiper | Se agregaron título, fecha y clasificación con una píldora visual. | Commit `j0k1l2` + Captura 4 |
+
+<p align="center">
+  <img src="img/Repocitorio.png" alt="Evidencia - Creación del Repositorio" width="600"><br>
+  <em><strong>Figura 1:</strong> Evidencia de la creación del repositorio en GitHub</em>
+</p>
+
+---
+
+
+## 💾 4. Historial de Commits Relevantes
+> Puedes obtenerlos con el comando:
+> ```bash
+> git log --oneline
+> ```
+
+| Commit | Mensaje | Fecha |
+|:--------|:----------|:-------|
+| `12f3a4b` | feat: agregar splash animado con audio | 09/11/2025 |
+| `9e8d7c6` | feat: implementar loading progresivo | 10/11/2025 |
+| `5d4c3b2` | fix: sombreado de Swiper y píldora de clasificación | 11/11/2025 |
+| `1a2b3c4` | refactor: separar providers de películas y series | 12/11/2025 |
+
+> 🔹 *Incluye mínimo 4 commits representativos, con mensajes claros y semánticos.*
+
+---
+
+## 🖼️ 5. Evidencias Visuales
+Las siguientes capturas se almacenan en la carpeta `docs/screenshots/` o `assets/screenshots/` del repositorio.
+
+| Evidencia | Descripción | Imagen |
+|:------------|:-------------|:--------|
+| Splash Screen | Animación inicial con logo y sonido | ![Splash](docs/screenshots/splash.png) |
+| Loading Screen | Indicador porcentual de carga | ![Loading](docs/screenshots/loading.png) |
+| Swiper Principal | Muestra título, fecha y clasificación | ![Swiper](docs/screenshots/swiper.png) |
+| Now Playing | Muestra la fecha dinámica actual | ![NowPlaying](docs/screenshots/now_playing.png) |
+
+> 📌 *Asegúrate de subir las imágenes al repositorio antes de referenciarlas.*
+
+---
+
+## 🤖 6. Uso de Inteligencia Artificial
+Durante el desarrollo autónomo se empleó apoyo asistido de IA generativa para:
+
+- Consultar ejemplos de obtención de clasificación de películas desde TMDB.  
+- Generar funciones de formateo de fechas con `intl`.  
+- Solicitar sugerencias de estilo para la barra de progreso y el Swiper.  
+- Redactar documentación técnica.
+
+Toda la evidencia de prompts y resultados se encuentra en el documento `Prompts.pdf` incluido en el repositorio.
+
+---
+
+## 🧭 7. Próximas Acciones
+- [ ] Integrar animación con Lottie en el Splash.  
+- [ ] Completar la sección de Series Populares.  
+- [ ] Documentar dependencias nuevas en el README.  
+- [ ] Grabar video corto mostrando la aplicación funcional.  
+
+> 🔹 *Marca con “✔️” las tareas completadas.*
+
+---
+
+## 💬 8. Conclusión Personal
+> Redacta un breve texto (5–8 líneas) respondiendo:
+> - ¿Qué aprendí al trabajar de forma autónoma?  
+> - ¿Qué parte me resultó más desafiante?  
+> - ¿Qué logré implementar con ayuda de la IA?  
+> - ¿Qué pienso mejorar antes de la entrega final?
+
+---
+
+## 🧠 9. Reflexión sobre el Aprendizaje
+> (Opcional) Describe cómo esta práctica contribuye a tu comprensión del desarrollo móvil integral con Flutter y el consumo de APIs públicas.
+
+---
+
+**📍 Última actualización:** _(editar con fecha real del último commit)_
