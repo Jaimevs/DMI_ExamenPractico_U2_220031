@@ -4,7 +4,6 @@ import 'package:cinemapedia_220031/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-
 class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
 
@@ -51,15 +50,14 @@ class _HomeViewState extends ConsumerState<_HomeView> {
 
     return CustomScrollView(
       slivers: [
-        const SliverAppBar(
+        SliverAppBar(
           floating: true,
-          flexibleSpace: FlexibleSpaceBar(
+          flexibleSpace: const FlexibleSpaceBar(
             title: CustomAppbar(),
           ),
         ),
         SliverList(
           delegate: SliverChildListDelegate([
-            CustomAppbar(),
             MovieSlideshow(movies: slideShowMovies),
             MovieHorizontalListview(
               movies: nowPlaying,
@@ -68,7 +66,6 @@ class _HomeViewState extends ConsumerState<_HomeView> {
               loadNextPage: () => 
                 ref.read(nowPlayingMoviesProvider.notifier).loadNextPage(),
             ),
-            
             MovieHorizontalListview(
               movies: upcomingMovies,
               title: 'Próximamente',
@@ -76,7 +73,6 @@ class _HomeViewState extends ConsumerState<_HomeView> {
               loadNextPage: () => 
                 ref.read(upcomingMoviesProvider.notifier).loadNextPage(),
             ),
-            
             MovieHorizontalListview(
               movies: popularMovies,
               title: 'Populares',
@@ -84,7 +80,6 @@ class _HomeViewState extends ConsumerState<_HomeView> {
               loadNextPage: () => 
                 ref.read(popularMoviesProvider.notifier).loadNextPage(),
             ),
-            
             MovieHorizontalListview(
               movies: topRatedMovies,
               title: 'Mejor calificadas',
@@ -92,7 +87,6 @@ class _HomeViewState extends ConsumerState<_HomeView> {
               loadNextPage: () => 
                 ref.read(topRatedMoviesProvider.notifier).loadNextPage(),
             ),
-            
             MovieHorizontalListview(
               movies: mexicanMovies,
               title: 'Mexicanas',
@@ -100,7 +94,6 @@ class _HomeViewState extends ConsumerState<_HomeView> {
               loadNextPage: () => 
                 ref.read(mexicanMoviesProvider.notifier).loadNextPage(),
             ),
-            
             const SizedBox(height: 10)
           ]),
         ),
