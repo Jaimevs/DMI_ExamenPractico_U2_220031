@@ -23,15 +23,13 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
 
 ## 🚀 3. Actividades Desarrolladas Durante la Contingencia
 
-
 | Fecha | Actividad | Descripción breve | Evidencia | Commit ID |
 |:------|:-----------|:------------------|:-----------|:-----------|
 | 08/11/2025 | Creación del repositorio | Se cargó la práctica base y se configuró la API TMDB. | 743ce1f (HEAD -> main, origin/main) first commit | 743ce1f |
 | 09/11/2025 | Implementación del Splash Screen | Se creó la carpeta `audio` y dentro de `screens/splash` se agregó `splash_screen.dart` usando `just_audio` para animación y audio. | d977227 (HEAD -> main, origin/main) ExamenPractico | d977227 |
 | 10/11/2025 | Pantalla de carga progresiva | Se programó un indicador porcentual que incrementa al cargar los providers. | Commit `g7h8i9` + Captura 3 | g7h8i9 |
-| 11/11/2025 | Ajustes visuales en Swiper | Se agregaron título, fecha y clasificación con una píldora visual. | Commit `j0k1l2` + Captura 4 | j0k1l2 |
+| 11/11/2025 | Ajustes visuales en Swiper | Se agregó clasificación visual y detalles en el carrusel de películas, mostrando título, fecha y clasificación con píldora de color. | aa2c15b (HEAD -> main, origin/main) ExamenPractico | aa2c15b |
 | 11/11/2025 | Personalización del ícono de la app | Se reemplazó el ícono predeterminado de Flutter por uno personalizado usando `flutter_launcher_icons`. | d80c8e9 (HEAD -> main, origin/main) ExamenPractico | d80c8e9 |
-
 
 <p align="center">
   <img src="img/Repocitorio.png" alt="Evidencia - Creación del Repositorio" width="600"><br>
@@ -57,9 +55,22 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
 
 </div>
 
+<div style="display: flex; justify-content: center; gap: 20px;">
+
+  <div style="text-align: center;">
+    <img src="img/img5.jpg" alt="Swiper antes de ajustes" width="400"><br>
+    <em><strong>Figura 5:</strong> Carrusel de películas antes de agregar clasificación visual y detalles.</em>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="img/img6.jpg" alt="Swiper después de ajustes" width="400"><br>
+    <em><strong>Figura 6:</strong> Carrusel de películas después de agregar clasificación visual y detalles con píldora de color.</em>
+  </div>
+
+</div>
+
 
 ---
-
 
 ## 💾 4. Historial de Commits Relevantes
 > Puedes obtenerlos con el comando:
