@@ -4,7 +4,7 @@ import 'series_providers.dart';
 
 final seriesSlideShowProvider =  
     Provider<List<Series>>((ref) {
-      final airingTodaySeries = ref.watch(airingTodaySeriesProvider);
-      if (airingTodaySeries.isEmpty) return [];
-      return airingTodaySeries.sublist(0, 6);
+      final topRatedSeries = ref.watch(topRatedSeriesProvider);
+      if (topRatedSeries.isEmpty) return [];
+      return topRatedSeries.sublist(0, 10.clamp(0, topRatedSeries.length));
 });

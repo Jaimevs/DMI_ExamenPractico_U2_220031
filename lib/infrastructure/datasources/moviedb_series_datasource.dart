@@ -64,9 +64,10 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
 
   @override
   Future<List<Series>> getUpcoming({int page = 1}) async {
-    final response = await dio.get('/tv/upcoming',
+    final response = await dio.get('/discover/tv',
     queryParameters: {
       'page': page,
+      'sort_by': 'first_air_date.desc',
     });
     final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
 
@@ -76,6 +77,24 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
       .toList();
 
     return series;
+  }
+
+  @override
+  Future<List<Series>> getMexicanSeries({int page = 1}) async {
+  final response = await dio.get('/discover/tv',
+  queryParameters: {
+    'page': page,
+    'with_original_language': 'es',
+    'region': 'MX',
+  });
+  final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
+
+  final List<Series> series = seriesDBResponse.results
+    .where((seriesdb) => seriesdb.posterPath != 'no-poster')
+    .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
+    .toList();
+
+  return series;
   }
   
 }

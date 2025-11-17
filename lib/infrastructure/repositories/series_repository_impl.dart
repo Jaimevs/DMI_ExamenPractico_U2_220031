@@ -28,4 +28,9 @@ class SeriesRepositoryImpl extends SeriesRepository {
     return datasource.getUpcoming(page: page);
   }
 
+  @override
+  Future<List<Series>> getMexicanSeries({int page = 1}) {
+    return datasource.getMexicanSeries(page: page);
+  }
+
 }

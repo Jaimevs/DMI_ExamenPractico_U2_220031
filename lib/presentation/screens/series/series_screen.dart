@@ -33,6 +33,7 @@ class _SeriesViewState extends ConsumerState<_SeriesView> {
     ref.read(popularSeriesProvider.notifier).loadNextPage();
     ref.read(topRatedSeriesProvider.notifier).loadNextPage();
     ref.read(upcomingSeriesProvider.notifier).loadNextPage();
+    ref.read(mexicanSeriesProvider.notifier).loadNextPage();
   }
 
   @override
@@ -45,6 +46,7 @@ class _SeriesViewState extends ConsumerState<_SeriesView> {
     final popularSeries = ref.watch(popularSeriesProvider);
     final topRatedSeries = ref.watch(topRatedSeriesProvider);
     final upcomingSeries = ref.watch(upcomingSeriesProvider);
+    final mexicanSeries = ref.watch(mexicanSeriesProvider);
 
     return CustomScrollView(
       slivers: [
@@ -59,31 +61,38 @@ class _SeriesViewState extends ConsumerState<_SeriesView> {
             SeriesSlideshow(series: slideShowSeries),
             SeriesHorizontalListview(
               series: airingToday,
-              title: 'En emisión',
-              subTitle: 'Hoy',
+              title: 'Series Actuales',
+              subTitle: 'En emisión',
               loadNextPage: () => 
                 ref.read(airingTodaySeriesProvider.notifier).loadNextPage(),
             ),
             SeriesHorizontalListview(
               series: upcomingSeries,
-              title: 'Próximamente',
-              subTitle: 'Nuevas series',
+              title: 'Por Estrenarse',
+              subTitle: 'Próximamente',
               loadNextPage: () => 
                 ref.read(upcomingSeriesProvider.notifier).loadNextPage(),
             ),
             SeriesHorizontalListview(
               series: popularSeries,
-              title: 'Populares',
+              title: 'Series Populares',
               subTitle: 'Este mes',
               loadNextPage: () => 
                 ref.read(popularSeriesProvider.notifier).loadNextPage(),
             ),
             SeriesHorizontalListview(
               series: topRatedSeries,
-              title: 'Mejor calificadas',
+              title: 'Series Mejor Valoradas',
               subTitle: 'De todos los tiempos',
               loadNextPage: () => 
                 ref.read(topRatedSeriesProvider.notifier).loadNextPage(),
+            ),
+            SeriesHorizontalListview(
+              series: mexicanSeries,
+              title: 'Series Mexicanas',
+              subTitle: 'Producción local',
+              loadNextPage: () => 
+                ref.read(mexicanSeriesProvider.notifier).loadNextPage(),
             ),
             const SizedBox(height: 10)
           ]),

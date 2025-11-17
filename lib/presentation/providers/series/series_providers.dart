@@ -32,6 +32,13 @@ final upcomingSeriesProvider =
       ),
     );
 
+final mexicanSeriesProvider =
+    NotifierProvider<SeriesNotifier, List<Series>>(
+      () => SeriesNotifier(
+        (ref) => ref.watch(seriesRepositoryProvider).getMexicanSeries,
+      ),
+    );
+
 class SeriesNotifier extends Notifier<List<Series>> {
   final SeriesCallback Function(Ref ref) _callbackBuilder;
   late final SeriesCallback fetchMoreSeries;
