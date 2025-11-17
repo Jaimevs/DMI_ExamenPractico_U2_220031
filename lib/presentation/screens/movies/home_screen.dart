@@ -3,6 +3,7 @@ import 'package:cinemapedia_220031/presentation/providers/providers.dart';
 import 'package:cinemapedia_220031/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
@@ -36,6 +37,18 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     ref.read(mexicanMoviesProvider.notifier).loadNextPage();
   }
 
+  String _getFormattedDate() {
+    final now = DateTime.now();
+    final dateFormat = DateFormat('EEEE, d \'de\' MMMM', 'es_MX');
+    return dateFormat.format(now);
+  }
+
+  String _getMonthName() {
+    final now = DateTime.now();
+    final dateFormat = DateFormat('MMMM', 'es_MX');
+    return dateFormat.format(now);
+  }
+
   @override
   Widget build(BuildContext context) {
     final initialLoading = ref.watch(initialLoadingProvider);
@@ -43,10 +56,10 @@ class _HomeViewState extends ConsumerState<_HomeView> {
 
     final nowPlaying = ref.watch(nowPlayingMoviesProvider);
     final slideShowMovies = ref.watch(moviesSlideShowProvider);
+    final upcomingThisMonth = ref.watch(upcomingThisMonthProvider);
     final popularMovies = ref.watch(popularMoviesProvider);
     final topRatedMovies = ref.watch(topRatedMoviesProvider);
-    final upcomingMovies = ref.watch(upcomingMoviesProvider);
-    final mexicanMovies = ref.watch(mexicanMoviesProvider);
+    final mexicanMoviesSorted = ref.watch(mexicanMoviesSortedProvider);
 
     return CustomScrollView(
       slivers: [
@@ -62,21 +75,21 @@ class _HomeViewState extends ConsumerState<_HomeView> {
             MovieHorizontalListview(
               movies: nowPlaying,
               title: 'En cines',
-              subTitle: 'Jueves, 3 de Noviembre',
+              subTitle: _getFormattedDate(),
               loadNextPage: () => 
                 ref.read(nowPlayingMoviesProvider.notifier).loadNextPage(),
             ),
-            MovieHorizontalListview(
-              movies: upcomingMovies,
+            MovieHorizontalListviewUpcoming(
+              movies: upcomingThisMonth,
               title: 'Próximamente',
-              subTitle: 'Noviembre',
+              subTitle: _getMonthName(),
               loadNextPage: () => 
                 ref.read(upcomingMoviesProvider.notifier).loadNextPage(),
             ),
             MovieHorizontalListview(
               movies: popularMovies,
               title: 'Populares',
-              subTitle: 'Noviembre',
+              subTitle: null,
               loadNextPage: () => 
                 ref.read(popularMoviesProvider.notifier).loadNextPage(),
             ),
@@ -88,7 +101,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
                 ref.read(topRatedMoviesProvider.notifier).loadNextPage(),
             ),
             MovieHorizontalListview(
-              movies: mexicanMovies,
+              movies: mexicanMoviesSorted,
               title: 'Mexicanas',
               subTitle: 'Noviembre',
               loadNextPage: () => 
