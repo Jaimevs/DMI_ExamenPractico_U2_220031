@@ -6,18 +6,18 @@ class SeriesMapper {
 
   static Series seriesDBToEntity(SeriesMovieDB seriesdb) => Series(
       adult: seriesdb.adult,
-      backdropPath: (seriesdb.backdropPath != '') 
-        ? 'https://image.tmdb.org/t/p/w500${ seriesdb.backdropPath }'
-        : 'https://sd.keepcalms.com/i-w600/keep-calm-poster-not-found.jpg',
+      backdropPath: seriesdb.backdropPath.isNotEmpty
+        ? 'https://image.tmdb.org/t/p/w500${seriesdb.backdropPath}'
+        : '',
       genreIds: seriesdb.genreIds.map((e) => e.toString()).toList(),
       id: seriesdb.id,
       originalLanguage: seriesdb.originalLanguage,
       originalTitle: seriesdb.originalTitle,
       overview: seriesdb.overview,
       popularity: seriesdb.popularity ?? 0.0,
-      posterPath: (seriesdb.posterPath != '')
-        ? 'https://image.tmdb.org/t/p/w500${ seriesdb.posterPath }'
-        : 'no-poster',
+      posterPath: seriesdb.posterPath.isNotEmpty
+        ? 'https://image.tmdb.org/t/p/w500${seriesdb.posterPath}'
+        : '',
       firstAirDate: seriesdb.firstAirDate,
       name: seriesdb.name,
       voteAverage: seriesdb.voteAverage ?? 0.0,

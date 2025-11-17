@@ -12,6 +12,15 @@ class SeriesSlideshow extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
 
+    // Filtrar series con backdrop válido
+    final validSeries = series
+        .where((s) => s.backdropPath.isNotEmpty)
+        .toList();
+
+    if (validSeries.isEmpty) {
+      return const SizedBox(height: 210);
+    }
+
     return SizedBox(
       height: 210,
       width: double.infinity,
@@ -28,8 +37,8 @@ class SeriesSlideshow extends StatelessWidget {
             activeSize: 10,
           ),
         ),
-        itemCount: series.length,
-        itemBuilder: (context, index) => _Slide(serie: series[index]),
+        itemCount: validSeries.length,
+        itemBuilder: (context, index) => _Slide(serie: validSeries[index]),
       ),
     );
   }
@@ -52,11 +61,9 @@ class _Slide extends StatelessWidget {
       ],
     );
 
-    // Obtener clasificación americana
     final rating = RatingHelper.getUsRating(serie.adult, serie.voteAverage);
     final ratingColor = RatingHelper.getRatingColor(rating);
 
-    // Formatear la fecha
     final dateFormat = DateFormat('dd MMM yyyy', 'es_MX');
     final formattedDate = dateFormat.format(serie.firstAirDate);
 
@@ -64,7 +71,6 @@ class _Slide extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 30),
       child: Stack(
         children: [
-          // Imagen de fondo
           DecoratedBox(
             decoration: decoration,
             child: ClipRRect(
@@ -72,18 +78,15 @@ class _Slide extends StatelessWidget {
               child: Image.network(
                 serie.backdropPath,
                 fit: BoxFit.cover,
-                loadingBuilder: (context, child, progress) {
-                  if (progress == null) return child;
-                  return const Center(
-                    child: CircularProgressIndicator(strokeWidth: 2),
-                  );
-                },
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
                     color: Colors.grey[800],
                     child: const Center(
-                      child: Icon(Icons.image_not_supported,
-                          color: Colors.white54, size: 50),
+                      child: Icon(
+                        Icons.image_not_supported,
+                        color: Colors.white54,
+                        size: 50,
+                      ),
                     ),
                   );
                 },
@@ -91,7 +94,6 @@ class _Slide extends StatelessWidget {
             ),
           ),
 
-          // Overlay con gradiente oscuro en la parte inferior
           Positioned(
             bottom: 0,
             left: 0,
@@ -115,13 +117,11 @@ class _Slide extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  // Información de la serie (título y fecha)
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        // Título
                         Text(
                           serie.name,
                           maxLines: 2,
@@ -134,7 +134,6 @@ class _Slide extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 6),
-                        // Fecha del primer episodio
                         Row(
                           children: [
                             const Icon(
@@ -157,7 +156,6 @@ class _Slide extends StatelessWidget {
                   ),
                   const SizedBox(width: 12),
 
-                  // Círculo con clasificación
                   Container(
                     width: 55,
                     height: 55,

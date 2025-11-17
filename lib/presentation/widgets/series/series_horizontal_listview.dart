@@ -159,7 +159,6 @@ class _Slide extends StatelessWidget {
   }
 }
 
-// ---------------- HEADER ----------------
 
 class _CurrDate extends StatelessWidget {
   final String? place;
@@ -176,10 +175,21 @@ class _CurrDate extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         children: [
-          if (place != null) Text(place!, style: placeStyle),
-          const Spacer(),
+          if (place != null) 
+            Expanded(
+              child: Text(place!, style: placeStyle),
+            ),
           if (formatedDate != null)
-            FilledButton.tonal(onPressed: () {}, child: Text(formatedDate!)),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: FilledButton.tonal(
+                onPressed: () {}, 
+                child: Text(
+                  formatedDate!,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
         ],
       ),
     );

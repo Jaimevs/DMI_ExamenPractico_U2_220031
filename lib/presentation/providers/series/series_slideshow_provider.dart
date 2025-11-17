@@ -6,5 +6,13 @@ final seriesSlideShowProvider =
     Provider<List<Series>>((ref) {
       final topRatedSeries = ref.watch(topRatedSeriesProvider);
       if (topRatedSeries.isEmpty) return [];
-      return topRatedSeries.sublist(0, 10.clamp(0, topRatedSeries.length));
+      
+      // Filtrar SOLO series con backdrop válido
+      final validSeries = topRatedSeries
+        .where((serie) => serie.backdropPath.isNotEmpty)
+        .toList();
+      
+      if (validSeries.isEmpty) return [];
+      final count = validSeries.length > 10 ? 10 : validSeries.length;
+      return validSeries.sublist(0, count);
 });

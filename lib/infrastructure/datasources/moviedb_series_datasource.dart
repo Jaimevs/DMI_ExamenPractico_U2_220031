@@ -23,7 +23,7 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
     final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
     
     final List<Series> series = seriesDBResponse.results
-      .where((seriesdb) => seriesdb.posterPath != 'no-poster')
+      .where((seriesdb) => seriesdb.posterPath.isNotEmpty)
       .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
       .toList();
     
@@ -39,7 +39,7 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
     final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
     
     final List<Series> series = seriesDBResponse.results
-      .where((seriesdb) => seriesdb.posterPath != 'no-poster')
+      .where((seriesdb) => seriesdb.posterPath.isNotEmpty)
       .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
       .toList();
     
@@ -55,7 +55,7 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
     final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
     
     final List<Series> series = seriesDBResponse.results
-      .where((seriesdb) => seriesdb.posterPath != 'no-poster')
+      .where((seriesdb) => seriesdb.posterPath.isNotEmpty && seriesdb.backdropPath.isNotEmpty)
       .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
       .toList();
     
@@ -72,7 +72,7 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
     final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
 
     final List<Series> series = seriesDBResponse.results
-      .where((seriesdb) => seriesdb.posterPath != 'no-poster')
+      .where((seriesdb) => seriesdb.posterPath.isNotEmpty)
       .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
       .toList();
 
@@ -81,20 +81,20 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
 
   @override
   Future<List<Series>> getMexicanSeries({int page = 1}) async {
-  final response = await dio.get('/discover/tv',
-  queryParameters: {
-    'page': page,
-    'with_original_language': 'es',
-    'region': 'MX',
-  });
-  final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
+    final response = await dio.get('/discover/tv',
+    queryParameters: {
+      'page': page,
+      'with_original_language': 'es',
+      'region': 'MX',
+    });
+    final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
 
-  final List<Series> series = seriesDBResponse.results
-    .where((seriesdb) => seriesdb.posterPath != 'no-poster')
-    .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
-    .toList();
+    final List<Series> series = seriesDBResponse.results
+      .where((seriesdb) => seriesdb.posterPath.isNotEmpty)
+      .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
+      .toList();
 
-  return series;
+    return series;
   }
   
 }
