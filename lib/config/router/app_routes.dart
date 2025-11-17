@@ -12,11 +12,18 @@ final appRouter = GoRouter(
       builder: (context, state) => const SplashScreen(),
     ),
 
-    // Home Screen
+    // Home Screen (Películas)
     GoRoute(
       path: '/',
       name: HomeScreen.name,
       builder: (context, state) => const HomeScreen(),
+    ),
+
+    // Series Screen
+    GoRoute(
+      path: '/series',
+      name: SeriesScreen.name,
+      builder: (context, state) => const SeriesScreen(),
     ),
 
     // Movie Detail Screen
@@ -26,6 +33,16 @@ final appRouter = GoRouter(
       builder: (context, state) {
         final movieId = state.pathParameters['id'] ?? 'no-id';
         return MovieScreen(movieId: movieId);
+      },
+    ),
+
+    // Series Detail Screen
+    GoRoute(
+      path: '/series/:id',
+      name: 'series-detail',
+      builder: (context, state) {
+        final seriesId = state.pathParameters['id'] ?? 'no-id';
+        return SeriesDetailScreen(seriesId: seriesId);
       },
     ),
 
