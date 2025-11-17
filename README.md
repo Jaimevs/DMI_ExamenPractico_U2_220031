@@ -27,7 +27,7 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
 |:------|:-----------|:------------------|:-----------|:-----------|
 | 08/11/2025 | Creación del repositorio | Se cargó la práctica base y se configuró la API TMDB. | 743ce1f (HEAD -> main, origin/main) first commit | 743ce1f |
 | 09/11/2025 | Implementación del Splash Screen | Se creó la carpeta `audio` y dentro de `screens/splash` se agregó `splash_screen.dart` usando `just_audio` para animación y audio. | d977227 (HEAD -> main, origin/main) ExamenPractico | d977227 |
-| 10/11/2025 | Pantalla de carga progresiva | Se programó un indicador porcentual que incrementa al cargar los providers. | Commit `g7h8i9` + Captura 3 | g7h8i9 |
+| 10/11/2025 | Pantalla de carga progresiva | Se añadió un indicador de carga animado que muestra el progreso mientras se cargan los providers. | bbc3ead (HEAD -> main, origin/main) ExamenPractico | bbc3ead |
 | 11/11/2025 | Ajustes visuales en Swiper | Se agregó clasificación visual y detalles en el carrusel de películas, mostrando título, fecha y clasificación con píldora de color. | aa2c15b (HEAD -> main, origin/main) ExamenPractico | aa2c15b |
 | 11/11/2025 | Personalización del ícono de la app | Se reemplazó el ícono predeterminado de Flutter por uno personalizado usando `flutter_launcher_icons`. | d80c8e9 (HEAD -> main, origin/main) ExamenPractico | d80c8e9 |
 
@@ -69,6 +69,10 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
 
 </div>
 
+<p align="center">
+  <img src="img/img7.jpg" alt="Pantalla de carga progresiva" width="400"><br>
+  <em><strong>Figura 7:</strong> Indicador de carga animado durante la inicialización de la app.</em>
+</p>
 
 ---
 
