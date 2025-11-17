@@ -1,0 +1,11 @@
+import 'package:cinemapedia_220031/domain/entities/series.dart';
+
+abstract class SeriesRepository {
+
+  // obtener la lista de series que se están emitiendo hoy
+  Future<List<Series>> getAiringToday({int page = 1});
+  Future<List<Series>> getPopular({ int page = 1 });
+  Future<List<Series>> getTopRated({ int page = 1 });
+  Future<List<Series>> getUpcoming({ int page = 1 });
+
+}
