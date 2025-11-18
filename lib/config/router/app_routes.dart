@@ -26,13 +26,13 @@ final appRouter = GoRouter(
       builder: (context, state) => const SeriesScreen(),
     ),
 
-    // Movie Detail Screen
+    // Movie Detail Screen (nuevo)
     GoRoute(
       path: '/movie/:id',
-      name: MovieScreen.name,
+      name: MovieDetailScreen.name,
       builder: (context, state) {
         final movieId = state.pathParameters['id'] ?? 'no-id';
-        return MovieScreen(movieId: movieId);
+        return MovieDetailScreen(movieId: movieId);
       },
     ),
 
