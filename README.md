@@ -40,76 +40,76 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
 
 
 <p align="center">
-  <img src="img/Repocitorio.png" alt="Evidencia - Creación del Repositorio" width="250"><br>
+  <img src="img/Repocitorio.png" alt="Evidencia - Creación del Repositorio" width="350"><br>
   <em><strong>Figura 1:</strong> Evidencia de la creación del repositorio en GitHub</em>
 </p>
 
 <p align="center">
-  <img src="img/icono.jpg" alt="Evidencia - Personalización del ícono de la app" width="250"><br>
+  <img src="img/icono.jpg" alt="Evidencia - Personalización del ícono de la app" width="350"><br>
   <em><strong>Figura 2:</strong> Evidencia de la personalización del ícono en la app Flutter.</em>
 </p>
 
-<div style="display: flex; justify-content: center; gap: 20px;">
+<div style="display: flex; justify-content: center; gap: 20px; margin: 0 auto;">
   <div style="text-align: center;">
-    <img src="img/img1.jpg" alt="Splash Screen - Logo de la App" width="250"><br>
+    <img src="img/img1.jpg" alt="Splash Screen - Logo de la App" width="350"><br>
     <em><strong>Figura 3:</strong> Pantalla de carga inicial con el logo de la app.</em>
   </div>
 
   <div style="text-align: center;">
-    <img src="img/img2.jpg" alt="Splash Screen - Animación y Audio" width="250"><br>
+    <img src="img/img2.jpg" alt="Splash Screen - Animación y Audio" width="350"><br>
     <em><strong>Figura 4:</strong> Animación con audio en el Splash Screen usando `just_audio`.</em>
   </div>
 </div>
 
-<div style="display: flex; justify-content: center; gap: 20px;">
+<div style="display: flex; justify-content: center; gap: 20px; margin: 0 auto; margin-top: 20px;">
   <div style="text-align: center;">
-    <img src="img/img5.jpg" alt="Swiper antes de ajustes" width="250"><br>
+    <img src="img/img5.jpg" alt="Swiper antes de ajustes" width="350"><br>
     <em><strong>Figura 5:</strong> Carrusel de películas antes de agregar clasificación visual y detalles.</em>
   </div>
 
   <div style="text-align: center;">
-    <img src="img/img6.jpg" alt="Swiper después de ajustes" width="250"><br>
+    <img src="img/img6.jpg" alt="Swiper después de ajustes" width="350"><br>
     <em><strong>Figura 6:</strong> Carrusel de películas después de agregar clasificación visual y detalles con píldora de color.</em>
   </div>
 </div>
 
 <p align="center">
-  <img src="img/img7.jpg" alt="Pantalla de carga progresiva" width="250"><br>
+  <img src="img/img7.jpg" alt="Pantalla de carga progresiva" width="350"><br>
   <em><strong>Figura 7:</strong> Indicador de carga animado durante la inicialización de la app.</em>
 </p>
 
 <p align="center">
-  <img src="img/img8.jpg" alt="Películas Actuales - Fecha dinámica" width="250"><br>
+  <img src="img/img8.jpg" alt="Películas Actuales - Fecha dinámica" width="350"><br>
   <em><strong>Figura 8:</strong> Películas actuales mostrando la fecha dinámica del dispositivo.</em>
 </p>
 
 <p align="center">
-  <img src="img/img9.jpg" alt="Próximos Estrenos filtrados" width="250"><br>
+  <img src="img/img9.jpg" alt="Próximos Estrenos filtrados" width="350"><br>
   <em><strong>Figura 9:</strong> Sección 'Upcoming' mostrando solo estrenos del mes y año vigentes.</em>
 </p>
 
 <p align="center">
-  <img src="img/img10.jpg" alt="Películas Populares sin subtítulo" width="250"><br>
+  <img src="img/img10.jpg" alt="Películas Populares sin subtítulo" width="350"><br>
   <em><strong>Figura 10:</strong> Películas populares sin subtítulo adicional en la sección.</em>
 </p>
 
 <p align="center">
-  <img src="img/img11.jpg" alt="Películas Mexicanas ordenadas" width="250"><br>
+  <img src="img/img11.jpg" alt="Películas Mexicanas ordenadas" width="350"><br>
   <em><strong>Figura 11:</strong> Películas mexicanas ordenadas por fecha de estreno descendente.</em>
 </p>
 
 <p align="center">
-  <img src="img/img12.jpg" alt="Swiper de Series" width="250"><br>
+  <img src="img/img12.jpg" alt="Swiper de Series" width="350"><br>
   <em><strong>Figura 12:</strong> Swiper con el Top 10 de series.</em>
 </p>
 
 <p align="center">
-  <img src="img/img13.jpg" alt="Series: listas infinitas" width="250"><br>
+  <img src="img/img13.jpg" alt="Series: listas infinitas" width="350"><br>
   <em><strong>Figura 13:</strong> Listas infinitas de Series Actuales, Próximas, Populares y Mejor Valoradas.</em>
 </p>
 
 <p align="center">
-  <img src="img/img14.jpg" alt="Detalle de Series o Películas" width="250"><br>
+  <img src="img/img14.jpg" alt="Detalle de Series o Películas" width="350"><br>
   <em><strong>Figura 14:</strong> Pantalla de detalles con géneros, sinopsis, actores y diseño avanzado.</em>
 </p>
 
@@ -117,71 +117,73 @@ Actualmente, se está implementando esta misma funcionalidad para <strong>series
 
 ---
 
-## 💾 4. Historial de Commits Relevantes
-> Puedes obtenerlos con el comando:
-> ```bash
-> git log --oneline
-> ```
+## 4. Historial de Commits Relevantes
 
 | Commit | Mensaje | Fecha |
 |:--------|:----------|:-------|
-| `12f3a4b` | feat: agregar splash animado con audio | 09/11/2025 |
-| `9e8d7c6` | feat: implementar loading progresivo | 10/11/2025 |
-| `5d4c3b2` | fix: sombreado de Swiper y píldora de clasificación | 11/11/2025 |
-| `1a2b3c4` | refactor: separar providers de películas y series | 12/11/2025 |
-
-> 🔹 *Incluye mínimo 4 commits representativos, con mensajes claros y semánticos.*
-
----
-
-## 🖼️ 5. Evidencias Visuales
-Las siguientes capturas se almacenan en la carpeta `docs/screenshots/` o `assets/screenshots/` del repositorio.
-
-| Evidencia | Descripción | Imagen |
-|:------------|:-------------|:--------|
-| Splash Screen | Animación inicial con logo y sonido | ![Splash](docs/screenshots/splash.png) |
-| Loading Screen | Indicador porcentual de carga | ![Loading](docs/screenshots/loading.png) |
-| Swiper Principal | Muestra título, fecha y clasificación | ![Swiper](docs/screenshots/swiper.png) |
-| Now Playing | Muestra la fecha dinámica actual | ![NowPlaying](docs/screenshots/now_playing.png) |
-
-> 📌 *Asegúrate de subir las imágenes al repositorio antes de referenciarlas.*
+| `356a09a` | feat: agregar pantallas de detalle para películas y series | 17/11/2025 |
+| `7b77d79` | feat: agregar detalles completos de película, actores e información adicional | 17/11/2025 |
+| `1779b19` | feat: implementación de tarjetas con datos principales de película | 17/11/2025 |
+| `f5106d3` | feat: mejorar secciones de películas (actuales, próximas, populares y mexicanas) | 17/11/2025 |
+| `47ebaea` | feat: implementar módulo completo de Series (entidad, screens, widgets y rutas) | 17/11/2025 |
+| `3b51bfc` | feat: arquitectura completa para Series (models, mappers, providers) | 17/11/2025 |
+| `934748b` | feat: agregar capa domain e infrastructure del módulo Series | 17/11/2025 |
+| `bbc3ead` | feat: Animated Splash Screen con audio + indicador de carga progresivo | 12/11/2025 |
+| `aa2c15b` | feat: agregar clasificación visual y detalles en el carrusel de películas | 11/11/2025 |
+| `d977227` | feat: creación de carpeta audio + pantalla Splash Screen con `just_audio` | 11/11/2025 |
+| `d80c8e9` | feat: creación de ícono personalizado usando `flutter_launcher_icons` | 11/11/2025 |
+| `f3241a2` | docs: creación del README y documentación inicial del proyecto | 11/11/2025 |
 
 ---
 
-## 🤖 6. Uso de Inteligencia Artificial
-Durante el desarrollo autónomo se empleó apoyo asistido de IA generativa para:
+###  Commit principal (mayor aporte al proyecto)
 
-- Consultar ejemplos de obtención de clasificación de películas desde TMDB.  
-- Generar funciones de formateo de fechas con `intl`.  
-- Solicitar sugerencias de estilo para la barra de progreso y el Swiper.  
-- Redactar documentación técnica.
+#### `356a09a` – **feat: agregar pantallas de detalle para películas y series**
 
-Toda la evidencia de prompts y resultados se encuentra en el documento `Prompts.pdf` incluido en el repositorio.
+Este commit incluye:
+
+- Información detallada de cada contenido  
+- Póster, géneros, sinopsis y calificación  
+- Listado de actores con imagen y personaje  
+- Consultas dinámicas a la API por ID  
+- Nuevos modelos y mappers para manejo de datos  
+- Providers para obtener detalle individual  
+- Diseño mejorado con gradientes y animaciones  
+- Pantallas completas para Películas y Series
 
 ---
 
-## 🧭 7. Próximas Acciones
-- [ ] Integrar animación con Lottie en el Splash.  
-- [ ] Completar la sección de Series Populares.  
-- [ ] Documentar dependencias nuevas en el README.  
-- [ ] Grabar video corto mostrando la aplicación funcional.  
+## 5. Evidencias Visuales
 
-> 🔹 *Marca con “✔️” las tareas completadas.*
+| Evidencia              | Descripción                                                                 | Imagen                                                |
+|------------------------|-----------------------------------------------------------------------------|------------------------------------------------------|
+| Splash Screen          | Animación inicial con logo, efecto FadeIn/ZoomIn y reproductor de audio     | <img src="img/01.jpg" width="150"/> |
+| Loading Screen         | Indicador porcentual de carga (0-100%) con barra de progreso animada        | <img src="img/02.jpg" width="150"/> |
+| Swiper Principal       | Muestra título, fecha de estreno y píldora de clasificación con sombreado   | <img src="img/03.jpg" width="150"/> |
+| Categorías de Series   | Vista detallada mostrando los diferentes grupos de series organizados por categoría con ratings y posters | <img src="img/04.jpg" width="150"/> |
+
+
+## 6. Uso de Inteligencia Artificial
+
+Documentacion: https://drive.google.com/file/d/1uIY6B4COQ1PMYIvZKEH9avWBJu7qjXEW/view?usp=sharing
 
 ---
 
 ## 💬 8. Conclusión Personal
-> Redacta un breve texto (5–8 líneas) respondiendo:
-> - ¿Qué aprendí al trabajar de forma autónoma?  
-> - ¿Qué parte me resultó más desafiante?  
-> - ¿Qué logré implementar con ayuda de la IA?  
-> - ¿Qué pienso mejorar antes de la entrega final?
+
+Durante el desarrollo de Cinemapedia 220031, aprendí la importancia de una arquitectura clara con separación de capas (domain, infrastructure, presentation) y cómo los providers de Riverpod facilitan la gestión de estado compleja. La parte más desafiante fue implementar correctamente los mappers para convertir datos de la API en entidades del dominio, especialmente al manejar valores nulos y rutas de imágenes inválidas. Con ayuda de la IA logré implementar funcionalidades avanzadas como pantallas de detalles dinámicas, filtrado de películas por mes, ordenamiento de series mexicanas, y un sistema completo de actores integrado. Para la entrega final, me propongo refinar la experiencia visual con transiciones más suaves, optimizar las consultas a API para reducir carga de datos innecesarios, e implementar un sistema de favoritos persistente con base de datos local.
 
 ---
 
 ## 🧠 9. Reflexión sobre el Aprendizaje
-> (Opcional) Describe cómo esta práctica contribuye a tu comprensión del desarrollo móvil integral con Flutter y el consumo de APIs públicas.
+
+Esta práctica ha consolidado mi comprensión del desarrollo móvil integral con Flutter al demostrar cómo integrar múltiples capas arquitectónicas en una aplicación real. Trabajar con la API de TheMovieDB me permitió entender la importancia de manejar correctamente los datos externos: validar respuestas, mapear estructuras JSON a entidades del dominio, y manejar casos donde faltan datos o URLs son inválidas. 
+
+La implementación de patrones como clean architecture con datasources, repositories y providers de Riverpod mostró cómo mantener el código escalable y testeable. Aprendí que la separación de responsabilidades no es solo teoría, sino fundamental para agregar features sin romper lo existente (como agregar series mexicanas ordenadas, o implementar pantallas de detalles sin afectar el listado principal).
+
+El mayor aprendizaje fue comprender el flujo completo: desde solicitar datos a la API → mapear a modelos → persistir en providers → renderizar en widgets. También entendí la importancia de la experiencia del usuario: mostrar loaders, manejar errores gracefully, y usar animaciones para transiciones suaves.
+
+Esta práctica me preparó para desarrollar aplicaciones reales que consumen APIs públicas, entienden arquitectura escalable, y brindan experiencias fluidas al usuario. Para futuros proyectos, aplicaré estos principios enfocándome en optimización de red (caché local) y persistencia de datos offline.
 
 ---
 
-**📍 Última actualización:** _(editar con fecha real del último commit)_
