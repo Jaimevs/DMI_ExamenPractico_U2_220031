@@ -4,6 +4,7 @@ import 'package:cinemapedia_220031/domain/datasources/series_datasource.dart';
 import 'package:cinemapedia_220031/infrastructure/mappers/series_mapper.dart';
 import 'package:cinemapedia_220031/infrastructure/models/moviedb/seriesdb_response.dart';
 import 'package:cinemapedia_220031/domain/entities/series.dart';
+import 'package:cinemapedia_220031/infrastructure/models/moviedb/series_details.dart';
 
 class MoviedbSeriesDatasource extends SeriesDatasource {
   final dio = Dio(BaseOptions(
@@ -96,5 +97,17 @@ class MoviedbSeriesDatasource extends SeriesDatasource {
 
     return series;
   }
+
+  @override
+Future<Series> getSeriesById(String id) async {
+  final response = await dio.get('/tv/$id');
+  if (response.statusCode != 200) {
+    throw Exception('Series with id: $id not found');
+  }
+
+  final seriesDetails = SeriesDetails.fromJson(response.data);
+  final Series series = SeriesMapper.seriesDetailsToEntity(seriesDetails);
+  return series;
+}
   
 }

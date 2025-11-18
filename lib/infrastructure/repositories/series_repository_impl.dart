@@ -33,4 +33,9 @@ class SeriesRepositoryImpl extends SeriesRepository {
     return datasource.getMexicanSeries(page: page);
   }
 
+  @override
+Future<Series> getSeriesById(String id) {
+  return datasource.getSeriesById(id);
+}
+
 }

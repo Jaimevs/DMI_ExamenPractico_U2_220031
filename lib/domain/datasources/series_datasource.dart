@@ -8,5 +8,6 @@ abstract class SeriesDatasource {
   Future<List<Series>> getTopRated({ int page = 1 });
   Future<List<Series>> getUpcoming({ int page = 1 });
   Future<List<Series>> getMexicanSeries({ int page = 1 });
+  Future<Series> getSeriesById(String id);
 
 }

@@ -39,12 +39,12 @@ final appRouter = GoRouter(
     // Series Detail Screen
     GoRoute(
       path: '/series/:id',
-      name: 'series-detail',
+      name: SeriesDetailScreen.name,
       builder: (context, state) {
-        final seriesId = state.pathParameters['id'] ?? 'no-id';
-        return SeriesDetailScreen(seriesId: seriesId);
-      },
-    ),
+      final seriesId = state.pathParameters['id'] ?? 'no-id';
+      return SeriesDetailScreen(seriesId: seriesId);
+    },
+  ),
 
   ]
 );
