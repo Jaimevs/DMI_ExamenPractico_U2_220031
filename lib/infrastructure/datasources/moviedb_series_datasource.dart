@@ -110,4 +110,25 @@ Future<Series> getSeriesById(String id) async {
   return series;
 }
   
+@override
+  Future<List<Series>> searchSeries(String query) async {
+    if (query.isEmpty) return [];
+
+    final response = await dio.get(
+      '/search/tv',
+      queryParameters: {
+        'query': query,
+      }
+    );
+
+    final seriesDBResponse = SeriesDbResponse.fromJson(response.data);
+
+    final List<Series> series = seriesDBResponse.results
+      .where((seriesdb) => seriesdb.posterPath.isNotEmpty)
+      .map((seriesdb) => SeriesMapper.seriesDBToEntity(seriesdb))
+      .toList();
+
+    return series;
+  }
+  
 }

@@ -109,6 +109,25 @@ Future<Movie> getMovieById(String id) async {
   return movie;
 }
 
+@override
+  Future<List<Movie>> searchMovies(String query) async {
+    if (query.isEmpty) return [];
 
+    final response = await dio.get(
+      '/search/movie',
+      queryParameters: {
+        'query': query,
+      }
+    );
+
+    final movieDBResponse = MovieDbResponse.fromJson(response.data);
+
+    final List<Movie> movies = movieDBResponse.results
+      .where((moviedb) => moviedb.posterPath != 'no-poster')
+      .map((moviedb) => MovieMapper.movieDBToEntity(moviedb))
+      .toList();
+
+    return movies;
+  }
   
 }

@@ -37,4 +37,9 @@ Future<Movie> getMovieById(String id) {
     return datasource.getMexicanMovies(page: page);
   }
 
+  @override
+  Future<List<Movie>> searchMovies(String query) {
+    return datasource.searchMovies(query);
+  }
+
 }

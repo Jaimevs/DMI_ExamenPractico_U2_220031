@@ -38,4 +38,9 @@ Future<Series> getSeriesById(String id) {
   return datasource.getSeriesById(id);
 }
 
+@override
+  Future<List<Series>> searchSeries(String query) {
+    return datasource.searchSeries(query);
+  }
+
 }
